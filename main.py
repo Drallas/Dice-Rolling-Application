@@ -1,19 +1,17 @@
-
 import dice
 
-number_of_dices = 0
+times_to_roll_dice = 0
+dice_role_list = []
 
-# main loop 
+# main loop
 if __name__ == "__main__":
 
-    number_of_dices = int(input("How many dices do you want to roll? "))
+    times_to_roll_dice = int(input("How many dices do you want to roll? "))
 
-    # check if the number of dices is vaid between 1 and 6
-    if number_of_dices < 1 or number_of_dices > 6:
-        print("You can only roll between 1 and 6 dices")
-        exit()
+    dice.check_input(times_to_roll_dice)
 
-    for roll in range(number_of_dices):
+    for roll in range(times_to_roll_dice):
         dice_num = dice.roll_dice()
-        print(f" Roll: {roll+1} - Number: {dice_num}\n")
+        dice_role_list.append(dice_num)
 
+print(f"You rolled {dice_role_list}")
