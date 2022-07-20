@@ -3,6 +3,7 @@ import dice
 times_to_roll_dice = 0
 dice_role_list = []
 
+
 # main loop
 if __name__ == "__main__":
 
@@ -14,4 +15,7 @@ if __name__ == "__main__":
         dice_num = dice.roll_dice()
         dice_role_list.append(dice_num)
 
-print(f"You rolled {dice_role_list}")
+    print(f"You rolled {dice_role_list}")
+
+    # print the dices
+    print(dice.generate_dice_art(dice_role_list))
