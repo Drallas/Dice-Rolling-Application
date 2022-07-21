@@ -1,12 +1,12 @@
 import random
 
 
-def roll_dice():
+def roll_dice() -> int:
     '''Creates a random number between 1 and 6'''
     return random.randint(1, 6)
 
 
-DICE_ART = {
+DICE_ART: dict = {
 
     1: (
 
@@ -70,5 +70,5 @@ DICE_ART = {
 
 }
 
-DIE_HEIGHT = len(DICE_ART[6])  # Dice has 5 list items
-DIE_FACE_SEPARATOR = " "
+DIE_HEIGHT: int = len(DICE_ART[6])  # Dice has 5 list items
+DIE_FACE_SEPARATOR: str = " "
