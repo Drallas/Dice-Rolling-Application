@@ -6,6 +6,7 @@ def roll_dice() -> int:
     return random.randint(1, 6)
 
 
+DIE_FACE_SEPARATOR: str = " "
 DICE_ART: dict = {
 
     1: (
@@ -69,6 +70,4 @@ DICE_ART: dict = {
     ),
 
 }
-
 DIE_HEIGHT: int = len(DICE_ART[6])  # Dice has 5 list items
-DIE_FACE_SEPARATOR: str = " "
