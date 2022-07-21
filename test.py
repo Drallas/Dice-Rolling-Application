@@ -21,4 +21,6 @@ class TestRollDice(unittest.TestCase):
 
     def test_roll_dice(self):
         for i in range(100):
-            assert 1 <= dice.roll_dice() <= 6
+            # print the error if the random number is not between 1 and 6
+            self.assertTrue(1 <= dice.roll_dice() <= 6)
+
