@@ -1,9 +1,5 @@
 import dice
 
-times_to_roll_dice: int = 0
-dice_role_list: list = []
-dice_num: int = 0
-
 
 def check_input(dices_roll_value) -> int:
     '''Checks the input string and returns the number of dices to roll'''
@@ -17,9 +13,8 @@ def generate_dice_art(dices_to_draw) -> str:
     '''Generates the dice art for the given dice number'''
 
     # Get for eact dice, grab the parts from DICE_ART
-    dice_faces_to_display: list = []
-    for number in dices_to_draw:
-        dice_faces_to_display.append(dice.DICE_ART[number])
+    dice_faces_to_display: list = [dice.DICE_ART[number] for number in dices_to_draw]
+
 
     # Stack the dice faces rows together
     dice_faces_rows: list = []
@@ -42,6 +37,9 @@ def generate_dice_art(dices_to_draw) -> str:
 
 # main loop
 if __name__ == "__main__":
+
+    dice_role_list: list = []
+
     times_to_roll_dice = int(input("How many dices do you want to roll? "))
 
     check_input(times_to_roll_dice)
