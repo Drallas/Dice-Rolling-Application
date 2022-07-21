@@ -22,4 +22,5 @@ class TestDice(unittest.TestCase):
 # Test 2: Check if roll_dice() returns a random number between 1 and 6.
 class TestRollDice(unittest.TestCase):
     def test_roll_dice(self):
-        assert dice.roll_dice() in range(1, 7)
+        for i in range(100):
+            assert 1 <= dice.roll_dice() <= 6
